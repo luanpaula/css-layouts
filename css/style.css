@@ -1,0 +1,134 @@
+/* Importação de todos os componentes */
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('base/grid.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/navigation.css');
+@import url('components/feedback.css');
+
+/* Layout */
+body {
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-row: 1;
+}
+
+.main-container {
+    grid-row: 2;
+    padding: var(--space-4) var(--space-2);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer {
+    grid-row: 3;
+}
+
+/* Hero */
+.hero-section {
+    text-align: center;
+    padding: var(--space-6) 0;
+    margin-bottom: var(--space-5);
+}
+
+.hero-section h1 {
+    font-size: var(--font-size-4xl);
+    color: var(--primary-color);
+    margin-bottom: var(--space-2);
+}
+
+.hero-section p {
+    font-size: var(--font-size-lg);
+    color: var(--neutral-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+/* Seção contato */
+.contact-section {
+    background: var(--neutral-white);
+    padding: var(--space-5);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--space-5);
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-4);
+    color: var(--primary-color);
+    font-size: var(--font-size-3xl);
+}
+
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--neutral-white);
+    text-align: center;
+    padding: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+/* 5 breakpoints */
+@media (max-width: 576px) {
+    .main-container {
+        padding: var(--space-2);
+    }
+    
+    .hero-section {
+        padding: var(--space-4) 0;
+    }
+    
+    .hero-section h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section {
+        padding: var(--space-3);
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
+    }
+}

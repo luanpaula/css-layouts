@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/grid.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/feedback.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Meu Portfólio</h2>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <input type="checkbox" id="projetos-toggle" class="dropdown-toggle">
+                    <label for="projetos-toggle" class="nav-link dropdown-label">
+                        Projetos <span class="arrow">▼</span>
+                    </label>
+                    <ul class="dropdown-menu">
+                        <li><a href="#web">Web</a></li>
+                        <li><a href="#mobile">Mobile</a></li>
+                        <li><a href="#design">Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section id="home" class="hero-section">
+            <h1>Projetos Desenvolvidos</h1>
+            <p>Confira abaixo alguns dos meus trabalhos recentes</p>
+        </section>
+
+        <section id="projetos" class="projects-grid">
+            <!-- CARD 1 -->
+            <div class="project-card">
+                <div class="card-image-1">
+                    <img src="projeto1.png" alt="Imagem do projeto de site institucional responsivo">
+                </div>
+                <div class="card-content">
+                    <h3>Site Institucional</h3>
+                    <p>Desenvolvimento de site responsivo para empresa local.</p>
+                    <div class="card-tags">
+                        <span class="tag tag-html">HTML</span>
+                        <span class="tag tag-css">CSS</span>
+                        <span class="tag tag-js">JavaScript</span>
+                        <span class="badge badge-primary">Destaque</span>
+                    </div>
+                    <label for="modal-1" class="btn btn-primary">Ver Detalhes</label>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card">
+                <div class="card-image-2">
+                    <img src="projeto2.png" alt="Imagem do projeto de aplicativo mobile de gestão de tarefas">
+                </div>
+                <div class="card-content">
+                    <h3>App Mobile</h3>
+                    <p>Aplicativo para gestão de tarefas diárias.</p>
+                    <div class="card-tags">
+                        <span class="tag tag-react">React Native</span>
+                        <span class="tag tag-firebase">Firebase</span>
+                        <span class="badge badge-success">Concluído</span>
+                    </div>
+                    <label for="modal-2" class="btn btn-secondary">Ver Detalhes</label>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="project-card">
+                <div class="card-image-3">
+                    <img src="projeto3.png" alt="Imagem do projeto de e-commerce">
+                </div>
+                <div class="card-content">
+                    <h3>E-commerce</h3>
+                    <p>Loja virtual com sistema de pagamentos integrado.</p>
+                    <div class="card-tags">
+                        <span class="tag tag-php">PHP</span>
+                        <span class="tag tag-mysql">MySQL</span>
+                        <span class="tag tag-js">JavaScript</span>
+                        <span class="badge badge-warning">Em Desenvolvimento</span>
+                    </div>
+                    <label for="modal-3" class="btn btn-primary">Ver Detalhes</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <h2>Entre em Contato</h2>
+            <form class="contact-form" action="#form-success" method="get">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                    <span class="error-message">Por favor, insira seu nome</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    <span class="error-message">Por favor, insira um email válido</span>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Sua mensagem..."></textarea>
+                    <span class="error-message">Por favor, insira uma mensagem</span>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+            </form>
+
+            <div id="form-success" class="alert alert-success">
+                ✅ Mensagem enviada com sucesso! Obrigado pelo contato.
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Modal 1 -->
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Site Institucional</h3>
+                <label for="modal-1" class="modal-close">×</label>
+            </div>
+            <div class="modal-body">
+                <p><strong>Descrição completa:</strong> Desenvolvimento de site institucional responsivo para uma
+                    empresa local, com foco em performance e acessibilidade.</p>
+                <p><strong>Tecnologias utilizadas:</strong> HTML5, CSS3, JavaScript ES6+</p>
+                <p><strong>Funcionalidades:</strong></p>
+                <ul>
+                    <li>Design responsivo</li>
+                    <li>Otimização SEO</li>
+                    <li>Formulário de contato</li>
+                    <li>Galeria de imagens</li>
+                </ul>
+                <div class="card-tags">
+                    <span class="badge badge-primary">HTML5</span>
+                    <span class="badge badge-secondary">CSS3</span>
+                    <span class="badge badge-success">JavaScript</span>
+                    <span class="badge badge-info badge-outline">Responsivo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <input type="checkbox" id="modal-2" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>App Mobile</h3>
+                <label for="modal-2" class="modal-close">×</label>
+            </div>
+            <div class="modal-body">
+                <p><strong>Descrição completa:</strong> Aplicativo mobile para gestão de tarefas com sincronização em
+                    tempo real.</p>
+                <p><strong>Tecnologias utilizadas:</strong> React Native, Firebase, Redux</p>
+                <p><strong>Funcionalidades:</strong></p>
+                <ul>
+                    <li>Sincronização em nuvem</li>
+                    <li>Notificações push</li>
+                    <li>Interface intuitiva</li>
+                    <li>Backend escalável</li>
+                </ul>
+                <div class="card-tags">
+                    <span class="badge badge-primary">React Native</span>
+                    <span class="badge badge-secondary">Firebase</span>
+                    <span class="badge badge-success badge-outline">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <input type="checkbox" id="modal-3" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>E-commerce</h3>
+                <label for="modal-3" class="modal-close">×</label>
+            </div>
+            <div class="modal-body">
+                <p><strong>Descrição completa:</strong> Plataforma de e-commerce completa com sistema de pagamentos e
+                    gestão de estoque.</p>
+                <p><strong>Tecnologias utilizadas:</strong> PHP, MySQL, JavaScript, API de Pagamento</p>
+                <p><strong>Funcionalidades:</strong></p>
+                <ul>
+                    <li>Carrinho de compras</li>
+                    <li>Checkout seguro</li>
+                    <li>Painel administrativo</li>
+                    <li>Relatórios de vendas</li>
+                </ul>
+                <div class="card-tags">
+                    <span class="badge badge-primary">PHP</span>
+                    <span class="badge badge-secondary">MySQL</span>
+                    <span class="badge badge-danger">E-commerce</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

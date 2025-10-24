@@ -1,0 +1,114 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-2);
+}
+
+/* Sistema de Grid 12 colunas */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-3);
+}
+
+/* Classes para as colunas */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* 5 Breakpoints bem definidos */
+/* X-Small: Mobile portrait */
+@media (max-width: 576px) {
+    .grid-12 {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+    [class*="col-"] {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Small: Mobile landscape */
+@media (min-width: 577px) and (max-width: 768px) {
+    .grid-12 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .col-sm-1 { grid-column: span 1; }
+    .col-sm-2 { grid-column: span 2; }
+    .col-sm-3 { grid-column: span 3; }
+    .col-sm-4 { grid-column: span 4; }
+    .col-sm-5 { grid-column: span 5; }
+    .col-sm-6 { grid-column: span 6; }
+}
+
+/* Medium: Tablets */
+@media (min-width: 769px) and (max-width: 992px) {
+    .grid-12 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+    .col-md-1 { grid-column: span 1; }
+    .col-md-2 { grid-column: span 2; }
+    .col-md-3 { grid-column: span 3; }
+    .col-md-4 { grid-column: span 4; }
+    .col-md-5 { grid-column: span 5; }
+    .col-md-6 { grid-column: span 6; }
+    .col-md-7 { grid-column: span 7; }
+    .col-md-8 { grid-column: span 8; }
+    .col-md-9 { grid-column: span 9; }
+}
+
+/* Large: Laptops */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .grid-12 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+/* X-Large: Desktops */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
+    }
+    .grid-12 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+/* Grid para componentes */
+.grid {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.grid-1 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 576px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
