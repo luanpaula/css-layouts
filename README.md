@@ -10,7 +10,7 @@ Um portfólio moderno e responsivo desenvolvido com HTML5 e CSS3, seguindo as me
 
 [🔗 **Acesse o Projeto Online**](https://luanpaula.github.io/css-layouts/)
 
-![Preview do Projeto](preview.png)
+![Preview do Projeto](images/preview.png)
 
 ## 📋 **Sobre o Projeto**
 
